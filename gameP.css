@@ -1,0 +1,129 @@
+/* ===== RETRO THEME BASE ===== */
+body.retro-theme {
+  background: radial-gradient(circle at top, #111 0%, #000 100%);
+  font-family: 'Press Start 2P', monospace;
+  color: #00ffcc;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a0a;
+  padding: 20px 40px;
+  border-bottom: 3px solid #ffcc00;
+  box-shadow: 0 0 20px #ffcc0044;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+.logo span {
+  color: #ffcc00;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00ffcc;
+  font-size: 0.7em;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* ===== RETRO GAMES GRID ===== */
+.related {
+  padding: 50px 40px;
+}
+
+.related h2 {
+  font-size: 1em;
+  margin-bottom: 25px;
+  color: #ff66cc;
+  text-align: center;
+  text-shadow: 0 0 10px #ff66cc66;
+}
+
+/* GRID */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+/* GAME CARD */
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  border: 2px solid #00ffcc40;
+  text-decoration: none; /* remove sublinhado */
+  color: inherit; /* mantém cor retrô */
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffcc0044;
+  border-color: #ffcc00;
+}
+
+/* IMAGEM */
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TÍTULO SOBRE A IMAGEM */
+.game-card h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000b8;
+  color: #ffcc00;
+  font-size: 0.65em;
+  padding: 10px 0;
+  text-align: center;
+  text-shadow: 0 0 5px #00ffcc;
+  border-top: 1px solid #00ffcc33;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .related {
+    padding: 30px 20px;
+  }
+}
